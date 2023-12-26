@@ -16,14 +16,14 @@ export class ProductService {
 
   getProductList(): Observable<Product[]> {
     return this.httpClient.get<GetResponse>(this.baseUrl).pipe(
-      map(response => response._embedded.products)
+      map(response => response._embedded.product) // Update to match the corrected interface
     );
   }
 }
 
 interface GetResponse {
   _embedded: {
-    products: Product[];
+    product: Product[];
   }
 }
 

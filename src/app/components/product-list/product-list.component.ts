@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Product } from 'src/app/common/product';
 import { ProductService } from 'src/app/service/product.service';
@@ -9,7 +10,7 @@ import { ProductService } from 'src/app/service/product.service';
 })
 export class ProductListComponent implements OnInit {
 
-  products: Product[] = [];
+  products: Product[];
 
   constructor(private productService: ProductService) { }
 
@@ -19,9 +20,8 @@ export class ProductListComponent implements OnInit {
   listProducts() {
     this.productService.getProductList().subscribe(
       data => {
-        console.log("check", data)
         this.products = data;
-      }
+              }
     )
   };
 }
