@@ -1,5 +1,6 @@
 <div class="page-wrapper">
 
+  <!-- Set up Router Links to pass category id param -->
   <!-- MENU SIDEBAR-->
   <aside class="menu-sidebar d-none d-lg-block">
     <div class="logo">
@@ -11,10 +12,10 @@
       <nav class="navbar-sidebar">
         <ul class="list-unstyled navbar-list">
           <li>
-            <a href="#">Books</a>
+            <a routerLink="/category/1" routerLinkActive="active-link">Books</a>
           </li>
           <li>
-            <a href="#">Coffee Mugs</a>
+            <a  routerLink="/category/2" routerLinkActive="active-link">Coffee Mugs</a>
           </li>
           <li>
             <a href="#">Mouse Pads</a>
@@ -53,7 +54,11 @@
     <!-- END HEADER DESKTOP-->
 
     <!-- MAIN CONTENT-->
-    <app-product-list></app-product-list>
+        <!-- Define the Router Outlet -->
+        <router-outer></router-outer>
+
+
+    <!-- <app-product-list></app-product-list> -->
 
   </div>
 </div>
