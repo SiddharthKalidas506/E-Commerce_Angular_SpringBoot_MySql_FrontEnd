@@ -1,6 +1,5 @@
 <div class="page-wrapper">
 
-  <!-- Set up Router Links to pass category id param -->
   <!-- MENU SIDEBAR-->
   <aside class="menu-sidebar d-none d-lg-block">
     <div class="logo">
@@ -8,24 +7,9 @@
         <img src="assets/images/products/logo.png" alt="luv2shop" class="img-responsive">
       </a>
     </div>
-    <div class="menu-sidebar-content js-scrollbar1">
-      <nav class="navbar-sidebar">
-        <ul class="list-unstyled navbar-list">
-          <li>
-            <a routerLink="/category/1" routerLinkActive="active-link">Books</a>
-          </li>
-          <li>
-            <a  routerLink="/category/2" routerLinkActive="active-link">Coffee Mugs</a>
-          </li>
-          <li>
-            <a href="#">Mouse Pads</a>
-          </li>
-          <li>
-            <a href="#">Luggage Tags</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
+
+    <app-product-category-menu></app-product-category-menu>
+
   </aside>
   <!-- END MENU SIDEBAR-->
   <!-- PAGE CONTAINER-->
@@ -54,14 +38,12 @@
     <!-- END HEADER DESKTOP-->
 
     <!-- MAIN CONTENT-->
-        <!-- Define the Router Outlet -->
-        <router-outlet></router-outlet>
-
-
-    <!-- <app-product-list></app-product-list> -->
+    <router-outlet></router-outlet>
 
   </div>
 </div>
+
+<!-- ENDS PAGE CONTAINER -->
 
 <footer>
   <ul>
